@@ -1,5 +1,11 @@
 # matryoshka — nested-instance host for the ACE engine
 
+**Working on the frame rate?** The brief is `HANDOFF.md` in the sibling
+`doom_ace` repository (github.com/Kodoque1/doom_ace). It states what is in scope
+(the frame path, this scheduler, the guest-state snapshot) and what is out of
+scope (the exploit entry), records every measurement taken so far, and lists the
+levers already eliminated. Current state: ~16 frames/s per instance, not smooth.
+
 Goal: N live ACE/Doom instances coexisting inside one running `DOOM2.EXE`,
 switched at runtime, without ever re-launching the executable. Depth 0 is the
 root and owns the real hardware; depth d+1 runs inside depth d. Ceiling: 12.
